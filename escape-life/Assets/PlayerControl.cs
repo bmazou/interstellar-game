@@ -17,25 +17,25 @@ public class PlayerControl : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown("w"))
+        if (Input.GetKey("w"))
         {
-            rb.velocity = new Vector2(0,velocityScaler);
+            rb.AddForce(new Vector2(0,velocityScaler));
         }
-        if (Input.GetKeyDown("s"))
+        if (Input.GetKey("s"))
         {
-            rb.velocity = new Vector2(0,-velocityScaler);
+            rb.AddForce(new Vector2(0,-velocityScaler));
         }
-        if (Input.GetKeyDown("a"))
+        if (Input.GetKey("a"))
         {
-            rb.velocity = new Vector2(-velocityScaler, 0);
+            rb.AddForce(new Vector2(-velocityScaler, 0));
         }
-        if (Input.GetKeyDown("d"))
+        if (Input.GetKey("d"))
         {
-            rb.velocity = new Vector2(velocityScaler, 0);
+            rb.AddForce(new Vector2(velocityScaler, 0));
         }
-        if (Input.GetKeyUp("w") || Input.GetKeyUp("a") || Input.GetKeyUp("s") || Input.GetKeyUp("d"))
-        {
-            rb.velocity = Vector2.zero;
-        }
+        // if (Input.GetKeyUp("w") || Input.GetKeyUp("a") || Input.GetKeyUp("s") || Input.GetKeyUp("d"))
+        // {
+        //     rb.AddForce(ector2.zero;
+        // }
     }
 }
