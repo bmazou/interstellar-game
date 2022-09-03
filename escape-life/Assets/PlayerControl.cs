@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerControl : MonoBehaviour
 {
     public float velocityScaler = 1;
+    public float dragScaler = 1;
 
     private Rigidbody2D rb;
 
@@ -33,9 +34,7 @@ public class PlayerControl : MonoBehaviour
         {
             rb.AddForce(new Vector2(velocityScaler, 0));
         }
-        // if (Input.GetKeyUp("w") || Input.GetKeyUp("a") || Input.GetKeyUp("s") || Input.GetKeyUp("d"))
-        // {
-        //     rb.AddForce(ector2.zero;
-        // }
+
+        rb.AddForce(-dragScaler * rb.velocity);
     }
 }
